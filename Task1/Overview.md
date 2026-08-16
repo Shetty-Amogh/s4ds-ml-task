@@ -10,6 +10,7 @@ Data Shape :
 This Dataset contains record for Crimes committed from 2021 to 2025, with various crime categories, which are listed below :
 
 | Crime | Count |
+| --- | --- |
 | Theift | 23660 |
 | Battery |22338 |
 | Criminal Damage | 11330 |
