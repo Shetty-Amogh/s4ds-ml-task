@@ -7,7 +7,7 @@ Data Shape :
 - Total Rows (Entries) : 120759
 - Total Columns (Features) : 23
 
-This Dataset contains record for Crimes committed from 2021 to 2025, with various crime categories, which are listed below : 
+This Dataset contains record for Crimes committed from 2021 to 2025, with various crime categories, which are listed below :
 
 | Crime | Count |
 | Theift | 23660 |
@@ -51,14 +51,15 @@ Out of all these reports, only 39617 of them have been arrested. That is a littl
 Null Values are present only in certain columns of the Dataset
 
 ```mermaid
-pie title Project Budget Allocation
+pie title Null Values in Project
     "X Coordinate" : 1877
     "Y Coordinate" : 1877
     "Latitude" : 1877
-    "Longitude" : 1877 
+    "Longitude" : 1877
     "Location" : 1877
     "Community Area" : 11
     "Location Description" : 463
+```
 
 ## Data Quality Analysis
 
