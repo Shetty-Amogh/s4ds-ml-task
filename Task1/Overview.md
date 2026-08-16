@@ -11,7 +11,7 @@ This Dataset contains record for Crimes committed from 2021 to 2025, with variou
 
 | Crime | Count |
 | --- | --- |
-| Theift | 23660 |
+| Theft | 23660 |
 | Battery |22338 |
 | Criminal Damage | 11330 |
 | Assult | 10341 |
@@ -62,21 +62,59 @@ pie title Null Values in Project
     "Location Description" : 463
 ```
 
+These missing values are in the cases of Narcotics, Deceptive Practice, Theft, Battery and Other Offences.
+
+Narcotics, even though is the 9th most category in which crimes have been reported, it is also the one with the most null values in the whole dataset.
+
+In the Data that are actually missing, it is observed that whenever one of the X coordinate, Y Cootdinate, Latitude, Longitude, Location is a null value, rest of the columns are null as well. This keeps the null count same in all the listed columns.   
+
+
 ## Data Quality Analysis
 
-- reduce data set and only show whats important
+Even though the rest of the data is not null, this does not mean that its right.
+
+There are time stamps in the dataset which indicate crimes have been occuring at 00:00:00 about 4000 times.
+
+There is a very very very low posibility of it being a coincidence, thus indicating wrongly filled data or dates with no time stamps, this puttiing 00:00:00 by default
+
+We will be dropping the rows with timestamp as 00:00:00 along with rows which has null values
+
+The final Rows (entries) in the Dataset are : 114690
+
+Now we will reduce down the features of the dataset by dropping columns which are repeated or which are not requried, even while training a model
+
+The columns which are dropped are : 
+- IUCR
+- Description
+- FBI Code
+- Updated Om
+- Latitude
+- Longitude
+- X Coordinate
+- Y Coordinate
+- Location
+- Case Number
+- _year (exact copy of column "Year")
+
+The rest of the columns and rows will be used for futher analysis and model training.
 
 ## Data Distribution Analysis
 
-- distrcit wise crime if possible
-- analyse the crime type, where it has happened, how many times, and if the suspect was caught or not
+District 11 has had the most amount of crime, followed by district 8,6,1 and 12.
+
+The most occuring crimes district wise are : 
+- District 11 : Narcotics (reaching 2000 cases)
+- District 8 : Battery
+- District 6 : Battery
+- District 1 : Theft
+- District 12 : Theft
+
+The graph shows the most amount of crimes have occured at around afternoon, indicating the crimes have been committed in broad daylight while the sun ia at its peak.
 
 # Analysis
 
 ## Univariate Analysis
 
-- top crime per year
-- no of not arrested per year and year with highest not arrested suspects
 
 ## BiVariate / MultiVariate Analysis
 
